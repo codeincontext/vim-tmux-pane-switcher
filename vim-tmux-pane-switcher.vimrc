@@ -24,3 +24,16 @@ function! s:JumpToWindow(new_window)
     execute a:new_window . "wincmd w"
   endif
 endfunction
+
+let previous_title = substitute(system("tmux display-message -p '#{pane_title}'"), '\n', '', '')
+let &t_ti = "\<Esc>]2;vim\<Esc>\\" . &t_ti
+let &t_te = "\<Esc>]2;". previous_title . "\<Esc>\\" . &t_te
+
+:map <silent> <C-O> :call TmuxPaneJumpForKey('o')<CR>
+:map <silent> <C-I> :call TmuxPaneJumpForKey('i')<CR>
+:map <silent> <C-U> :call TmuxPaneJumpForKey('u')<CR>
+
+:imap <C-O> <Esc><C-O>
+:imap <C-I> <Esc><C-I>
+:imap <C-U> <Esc><C-U>
+
