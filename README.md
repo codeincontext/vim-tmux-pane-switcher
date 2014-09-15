@@ -6,7 +6,7 @@ A fast way to switch between vim and tmux panes
 
 #### Why?
 
-Both vim and tmux have a concept of panes, and switching between them takes too
+Both vim and tmux have a concept of panes, but switching between them takes too
 many keystrokes and gets too confusing. Attempts have been made to bridge
 up/down/left/right shortcuts, but you're still left with independent state and
 confusing behaviour.
@@ -14,9 +14,11 @@ confusing behaviour.
 My solution is a lot simpler. It works for me, with my arrangement of panes.
 You can probably adapt it to yours.
 
+![](http://f.cl.ly/items/3h1227110s3H2x3G023C/Untitled.gif)
+
 #### How?
 
-Rather than moving left/right/up/down to eventuallly get where you want, let's
+Rather than moving left/right/up/down to eventually get where you want, let's
 map keys to each individual pane...
 
 
@@ -48,7 +50,7 @@ Let's directly map them together (c = ctrl)
     | c-J | c-K | c-L |
     |_____|_____|_____|
 
-So pressing ctrl-I takes you to the middle Vim split. Pressing c-L takes you
+So pressing `ctrl-I` takes you to the middle Vim split. Pressing `ctrl-L` takes you
 to the bottom right tmux split.
 
 If you have fewer than 3 vim or tmux panes, it'll still map the keys as you'd
@@ -61,3 +63,8 @@ expect. All of the following should work:
     |   c-J  |  c-L   |  |   c-J  |  c-L   |  |   c-J  |  c-L   |
     |________|________|  |________|________|  |________|________|
 
+
+#### Installation
+
+Copy the tmux config into your tmux.conf and the vim config into your vimrc. If
+people really like it I might make it into a plugin
