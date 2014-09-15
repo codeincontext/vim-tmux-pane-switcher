@@ -66,5 +66,9 @@ expect. All of the following should work:
 
 #### Installation
 
-Copy the tmux config into your tmux.conf and the vim config into your vimrc. If
-people really like it I might make it into a plugin
+Copy the tmux config into your tmux.conf and the vim config into your vimrc.
+
+The next step is frustrating but needed. Because `ctrl+I` and `Tab` use the same escape
+code, Vim can't tell them apart. I've remapped `ctrl+I` to `ctrl+H` in iTerm and bound Vim to that key instead.
+
+I can provide instructions if people care.
